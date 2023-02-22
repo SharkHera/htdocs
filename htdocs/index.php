@@ -26,6 +26,11 @@ if (isset($_POST['user_name'])) {
         header('Location: TopSons.php');
     }
 }
+
+
+
+
+
 ?>
 
 
@@ -51,7 +56,7 @@ if (isset($_POST['user_name'])) {
 
     <!-- CUSTOM CURSOR -->
     <div class="centre-img">
-        <img src="/css/images/Spotizer.png" alt="Logo Spotizer" class="logo">
+        <img src="css\images\Spotizer.png" alt="Logo Spotizer" class="logo">
     </div>
     <!-- LOGIN FORM -->
     <div class="login-card">
@@ -68,7 +73,7 @@ if (isset($_POST['user_name'])) {
         <hr class="form_separation">
         <h3 class="espace">login</h3>
 
-        <form method="post" action="connexion.php" enctype="multipart/form-data" class="login-form2 login-form">
+        <form method="post" action="traitement\test-erreur.php" enctype="multipart/form-data" class="login-form2 login-form">
 
             <input type="text" name="connection_user_name" placeholder="Username">
 

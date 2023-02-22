@@ -1,11 +1,21 @@
 <?php
-include('navbar.html');
 
-var_dump($user_id);
+// Retrieve the user id from the session variable on the personalized page
+session_start();
+if (isset($_SESSION['user_id'])) {
+    // User is logged in, retrieve the user id from the session variable
+    $user_id = $_SESSION['user_id'];
+    // Use the user id to create personalized content on the page
+    echo "Welcome, user $user_id!";
+} else {
+    // User is not logged in, redirect to login page
+    header('Location: login.php');
+    exit;
+}
+
+
 
 ?>
-
-
 
 
 <!DOCTYPE html>
@@ -16,7 +26,7 @@ var_dump($user_id);
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Spotizer</title>
-  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="css\custom.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -27,7 +37,7 @@ var_dump($user_id);
     <div class="Top">
       <div class="Left">
         <div class="IMG">
-          <img src="/css/images/carro.jpg" alt="image artiste" class="Img_Artiste">
+          <img src="css\images\carro.jpg" alt="image artiste" class="Img_Artiste">
           <div class="Equiliser">
             <span></span>
             <span></span>
@@ -85,7 +95,7 @@ var_dump($user_id);
   <div class="Bottom">
     <div class="Info_Artist">
       <div class="Info_Img">
-        <img src="/css/images/carro.jpg" alt="Img Artiste 2" class="Img_Artiste2">
+        <img src="css\images\carro.jpg" alt="Img Artiste 2" class="Img_Artiste2">
       </div>
       <div class="Info_Details">
         <h4 id="Titre_Music">PlaceHolder</h4>
@@ -117,15 +127,15 @@ var_dump($user_id);
   </div>
   </div>
 </body>
-<script src="/JS/script.js"></script>
-<script src="/JS/button_stop.js"></script>
-<script src="/JS/load_track.js"></script>
-<script src="/JS/jouer_sons.js"></script>
-<script src="/JS/next_song.js"></script>
-<script src="/JS/prev_song.js"></script>
-<script src="/JS/random.js"></script>
-<script src="/JS/stop_song.js"></script>
-<script src="/JS/volume.js"></script>
-<script src="/JS/repeatmusic.js"></script>
+<script src="JS\script.js"></script>
+<script src="JS\button_stop.js"></script>
+<script src="JS\load_track.js"></script>
+<script src="JS\jouer_sons.js"></script>
+<script src="JS\next_song.js"></script>
+<script src="JS\prev_song.js"></script>
+<script src="JS\random.js"></script>
+<script src="JS\stop_song.js"></script>
+<script src="JS\volume.js"></script>
+<script src="JS\repeatmusic.js"></script>
 
 </html>

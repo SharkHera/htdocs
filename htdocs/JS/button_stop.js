@@ -12,13 +12,12 @@ BtnOff.onclick = () => {
         All_Bouton.classList.add("On");
         Left.classList.toggle("Show");
         Right.classList.toggle("Show");
+    
         On = true;
     }else {
         BtnOff.classList.remove("On");
         All_Bouton.classList.remove("On");
-        Left.classList.toggle("Show");
-        Right.classList.toggle("Show");
-        On = false;
+        On = true;
         Location.reload();
     }
 }

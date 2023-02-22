@@ -1,7 +1,7 @@
 <?php
    	// Establish a database connection
 $db_host = '127.0.0.1';
-$db_name = 'spotizer';
+$db_name = 'Spotizer';
 $db_user = 'root';
 $db_pass = '';
 
