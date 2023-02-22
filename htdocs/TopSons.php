@@ -1,3 +1,13 @@
+<?php
+include('navbar.html');
+
+var_dump($user_id);
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 

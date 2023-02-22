@@ -68,7 +68,7 @@ if (isset($_POST['user_name'])) {
         <hr class="form_separation">
         <h3 class="espace">login</h3>
 
-        <form method="post" action="TopSons.php" enctype="multipart/form-data" class="login-form2 login-form">
+        <form method="post" action="connexion.php" enctype="multipart/form-data" class="login-form2 login-form">
 
             <input type="text" name="connection_user_name" placeholder="Username">
 
